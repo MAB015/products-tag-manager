@@ -112,8 +112,8 @@ export const useAppStore = create(
     filteredProducts: null,
     searchByTitle: null,
 
-    selectedProducts: [],
-    selectedTags: [],
+    selectedProducts: null,
+    selectedTags: null,
 
     filteredTags: null,
 
@@ -132,17 +132,23 @@ export const useAppStore = create(
       })
     },
 
-    addSelectedProduct: (selectedProduct: Product) => set((state) => ({
-        selectedProducts: [...state.selectedProducts, selectedProduct],
-    })),
+    addSelectedProduct: (selectedProduct: Product) =>
+      set((state) => {
+        // Ensure selectedProducts is an array before using spread operator
+        state.selectedProducts = state.selectedProducts || [];
+        state.selectedProducts.push(selectedProduct);
+      }),
 
     deleteSelectedProduct: (productId: string) => set((state) => ({
         selectedProducts: state.selectedProducts?.filter(product => product.id !== productId)
     })),
 
-    addSelectedTag: (selectedTag: string) => set((state) => ({
-        selectedTag: [...state.selectedTags, selectedTag],
-    })),
+    addSelectedTag: (selectedTag: string) =>
+      set((state) => {
+        // Ensure selectedTags is an array before using spread operator
+        state.selectedTags = state.selectedTags || [];
+        state.selectedTags.push(selectedTag);
+      }),
 
     deleteSelectedTag: (selectedTag: string) => set((state) => ({
         selectedTag: state.selectedTags?.filter(tag => tag !== selectedTag)

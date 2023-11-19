@@ -2,7 +2,7 @@ import { Product, useAppStore } from '../store/store'
 
 const ProductCard = ( data ): JSX.Element => {
     
-    const { addSelectedProduct, deleteSelectedProduct, addProductTags, selectedProducts } = useAppStore((state) => state)
+    const { addSelectedProduct, deleteSelectedProduct } = useAppStore((state) => state)
 
     const handleCheckboxChange = (isChecked: boolean, product: Product, productId: string) => {
         if (isChecked) {

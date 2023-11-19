@@ -9,7 +9,7 @@ const ModalAddTag: React.FC =  () => {
 
     const {  isModalAddTagOpen, closeModalAddTag } = useModalStore();
     
-    const { addTag, deleteTag } = useAppStore();
+    const { addTag } = useAppStore();
     
     // State to manage the input value
     const [tagInput, setTagInput] = useState<string>('');
@@ -17,9 +17,9 @@ const ModalAddTag: React.FC =  () => {
     const [ confirm, setConfirm ] = useState<string>('')
     
     // GET ALL TAGS
-    const getAllTags = useAppStore(
-        (state) => state.tags.listTags
-    )
+    // const getAllTags = useAppStore(
+    //     (state) => state.tags.listTags
+    // )
 
     // ADD A TAG
     const handleAddTag = () => {
@@ -33,7 +33,7 @@ const ModalAddTag: React.FC =  () => {
         setConfirm('')
     })) 
 
-   
+
     return (
         <Modal
             isOpen={isModalAddTagOpen}

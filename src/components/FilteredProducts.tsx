@@ -28,10 +28,10 @@ const FilteredProducts = () => {
     const productTypeKeys = useAppStore(
         
         (state) => {
-            const productTypeKeysTrue : [] = [];
+            const productTypeKeysTrue : string[] = [];
             Object.entries(state.productTypeKeys).map((key)=> {
                 if(key[1] === true) {
-                    productTypeKeysTrue.push(key[0] )
+                    productTypeKeysTrue.push(key[0])
                 }
             })
             return productTypeKeysTrue
@@ -42,7 +42,7 @@ const FilteredProducts = () => {
     // COUNTER OF SELECTED PRODUCTS
 
     const selectedProductsCount = useAppStore(
-        state => state.selectedProducts.length
+        (state) => (state.selectedProducts ? state.selectedProducts.length : 0)
     );
 
     

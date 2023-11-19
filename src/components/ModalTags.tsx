@@ -33,17 +33,17 @@ const ModalTags: React.FC =  () => {
     )
 
 
-    // ADD A TAG
-    const handleAddTag = (tag : string) => {
-        const newTag = tag; 
-        addTag(newTag);
-    };
+    // // ADD A TAG
+    // const handleAddTag = (tag : string) => {
+    //     const newTag = tag; 
+    //     addTag(newTag);
+    // };
 
-    // DELETE A TAG
-    const handleDeleteTag = (tag: string) => {
-        const tagToDelete = tag;
-        deleteTag(tagToDelete);
-    };
+    // // DELETE A TAG
+    // const handleDeleteTag = (tag: string) => {
+    //     const tagToDelete = tag;
+    //     deleteTag(tagToDelete);
+    // };
 
     // ADD A TAG
     const handleAddSelectedTag = (tag : string) => {
