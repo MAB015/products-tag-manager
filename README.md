@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Wyzibot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Wizibot is an AI Bot for Shopify
 
-Currently, two official plugins are available:
+## Figma Prototype
+[Link to the prototype] (https://www.figma.com/file/pB7liI6mbrOutzrq7u3nSt/Wizybot---Tag-Manager?type=design&node-id=6%3A1406&mode=design&t=SoQZDoLs6yqXDBII-1)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+- download or clone the repository
+- run npm install
+- run npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Approach
+- I adopted ReactJS with Typecript
+- In the styles area: TaildwindCSS
+- To manage states: Zustand
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Status
+- UX ready
+- UI and prototype ready
+- Layout ready
+- Some functions ready
+- - Can Filter products for its name, its type and combine
+- - Can check the tags and can add tags
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Authors
+
+- Miguel Angel Bolanos
