@@ -15,7 +15,6 @@ const Home = () => {
                 <div className='flex w-full justify-between p-6 bg-bgPanels rounded-2xl shadow-md'>
                     <HeaderContent />
                 </div>
-
                 <div className='flex flex-col w-full p-6 gap-12 bg-bgPanels rounded-t-2xl shadow-md'>
                     <FilteredProducts />
                 </div>

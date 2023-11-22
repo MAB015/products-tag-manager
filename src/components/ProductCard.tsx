@@ -4,7 +4,7 @@ interface ProductCardProps {
     data: Product
 }
 
-const ProductCard = ({ data  }: ProductCardProps ) => {
+const ProductCard: React.FC <ProductCardProps> = ({ data  } ) => {
     
     const { addSelectedProduct, deleteSelectedProduct } = useAppStore((state) => state)
 
@@ -25,12 +25,8 @@ const ProductCard = ({ data  }: ProductCardProps ) => {
                     <input
                         type="checkbox"
                         className="w-5 h-5"
-                        // checked={''}
                         onChange={(e) => {
-                            // setSelectedProducts( data.data )
-                            // addSelectedProducts( data.data )
                             handleCheckboxChange(e.target.checked, data , data.id)
-                            
                         }}
                         aria-label={ data.displayTitle }
                     />
