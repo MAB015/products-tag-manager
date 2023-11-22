@@ -10,7 +10,7 @@ const ModalTags: React.FC =  () => {
 
     
 
-    const { addTag, deleteTag, addSelectedTag, deleteSelectedTag, selectedTags } = useAppStore();
+    const { addSelectedTag, deleteSelectedTag, selectedTags } = useAppStore();
 
     // GET FILTERED TAGS
     const filteredTags = useAppStore(

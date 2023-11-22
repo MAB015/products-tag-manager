@@ -1,6 +1,10 @@
 import { Product, useAppStore } from '../store/store'
 
-const ProductCard = ( data ): JSX.Element => {
+interface ProductCardProps {
+    data: Product
+}
+
+const ProductCard = ({ data  }: ProductCardProps ) => {
     
     const { addSelectedProduct, deleteSelectedProduct } = useAppStore((state) => state)
 
@@ -25,17 +29,17 @@ const ProductCard = ( data ): JSX.Element => {
                         onChange={(e) => {
                             // setSelectedProducts( data.data )
                             // addSelectedProducts( data.data )
-                            handleCheckboxChange(e.target.checked, data.data, data.data.id)
+                            handleCheckboxChange(e.target.checked, data , data.id)
                             
                         }}
-                        aria-label={ data.data.displayTitle }
+                        aria-label={ data.displayTitle }
                     />
                 </label>
             </div>
-            <img src={ data.data.imageUrl } alt='image test' className='aspect-square object-cover shadow-sm'/>
+            <img src={ data.imageUrl } alt='image test' className='aspect-square object-cover shadow-sm'/>
             <div className='p-1'>
-                <h3 className='text-sm font-semibold line-clamp-2'>{ data.data.displayTitle } </h3>
-                <p className='text-xs'>{ data.data.productType }</p>
+                <h3 className='text-sm font-semibold line-clamp-2'>{ data.displayTitle } </h3>
+                <p className='text-xs'>{ data.productType }</p>
             </div>
         </div>
     )
